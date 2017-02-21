@@ -1,0 +1,68 @@
+\documentclass{beamer}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[ngerman]{babel}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{listings}
+\usepackage{color}
+\setbeamercovered{transparent}
+\setbeamertemplate{footline}[frame number]
+
+%meta
+\title{\textbf{Lineare Logik} \\ Of course linear! Why not intuitionistic?}
+\author{\textbf{uwap}}
+\date{\textbf{\today}}
+\begin{document}
+
+\begin{frame}
+  \titlepage%
+\end{frame}
+
+\begin{frame}
+  \frametitle{Inhaltsverzeichnis}
+  \tableofcontents
+\end{frame}
+
+\section{Lollis und andere Süßigkeiten}
+\begin{frame}
+  \textbf{Aussage A:} Emily hat genau 5 cent.\\ \pause%
+  \textbf{Aussage B:} Emily hat ein Bonbon.\\ \pause%
+  Ein Bonbon kostet 5 cent.\\ \pause%
+
+  \begin{equation}
+    \frac{A \implies B}
+         {\Gamma, A \vdash \Gamma, B}
+  \end{equation}
+  
+  \pause%
+  
+  \begin{equation}
+    \frac{\Gamma \vdash B}
+         {\Gamma, A \vdash B}
+  \end{equation}
+  
+  \pause%
+  
+  \begin{equation}
+    \frac{A \implies B}
+         {\Gamma, A \vdash \Gamma, A, B}
+  \end{equation}
+\end{frame}
+
+\begin{frame}
+  Contraction
+  \begin{equation*}
+    \frac{\Gamma, A, A \vdash B}
+         {\Gamma, A \vdash B}
+  \end{equation*}
+
+  Weakening
+  \begin{equation*}
+    \frac{\Gamma \vdash B}
+         {\Gamma, A \vdash B}
+  \end{equation*}
+\end{frame}
+
+\end{document}
